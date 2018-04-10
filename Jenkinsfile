@@ -1,10 +1,9 @@
 pipeline {
     agent any
 
-   
-    triggers {
-         pollSCM('* * * * *')
-     }
+        tools {
+        maven 'localMaven'
+    }
 
 stages{
         stage('Build'){
